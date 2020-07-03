@@ -1,0 +1,5 @@
+# This will redirect the user to Index.php file under Public/ folder
+
+RewriteEngine on
+RewriteCond %{REQUEST_URI} !\.(?:css|js|jpe?g|gif|png)$ [NC]
+RewriteRule ^([a-zA-Z0-9\-\_\/]*)$ index.php?p=$1

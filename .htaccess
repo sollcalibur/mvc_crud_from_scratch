@@ -1,0 +1,6 @@
+# Instead of searching for the index.php file in the root directory, 
+# redirect the user to Public/ folder
+# Public/ folder is the only directory accessible by the user.
+
+RewriteEngine on
+RewriteRule ^([a-zA-Z0-9\-\_\/]*)$ Public/$1
