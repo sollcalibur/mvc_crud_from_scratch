@@ -48,7 +48,7 @@ if (isset($data['result']) && $data['result'] === FALSE) {
     <button name="submit" type="submit" class="btn btn-primary">
         Submit
     </button>
-    <a class="btn btn-info" href="<?php echo WEBROOT . "Crud/index/1"; ?>">
+    <a class="btn btn-info" href="<?php echo WEBROOT . "crud/index/1"; ?>">
         Home
     </a>
 </form>

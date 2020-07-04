@@ -79,10 +79,7 @@ class User
                         user_password = CASE WHEN :user_password = '' THEN user_password ELSE :user_password END, 
                         user_longname = CASE WHEN :user_longname = '' THEN user_longname ELSE :user_longname END,
                         user_updated_on = :user_updated_on
-                WHERE user_id = :user_id
-                AND NOT EXISTS ( 
-                        SELECT * FROM user WHERE user_name = :user_name AND user_id <> :user_id
-                    )";
+                WHERE user_id = :user_id";
         $req = Model::getDbInstance()->prepare($sql);
         $req->bindParam(':user_longname', $fullname, PDO::PARAM_STR);
         $req->bindParam(':user_name', $username, PDO::PARAM_STR);

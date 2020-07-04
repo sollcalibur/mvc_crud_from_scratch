@@ -8,7 +8,7 @@ class Router
 
         if ($url == $base_url) {
             // controller class CrudController 
-            $request->controller = "Crud";
+            $request->controller = "crud";
             // controller class function index()
             $request->action = "index";
             // controller class function index(params)

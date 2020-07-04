@@ -1,6 +1,6 @@
 <?php
 define('WEBROOT', str_replace("Public/index.php", "", $_SERVER["SCRIPT_NAME"]));
-define('ROOT', str_replace("Public/index.php", "", $_SERVER["SCRIPT_FILENAME"]));
+define('ROOT', str_replace("Public/Index.php", "", $_SERVER["SCRIPT_FILENAME"]));
 
 require(ROOT . 'Config/core.php');
 require(ROOT . 'router.php');

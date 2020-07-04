@@ -9,7 +9,7 @@ class CrudController extends Controller
     {
         $input['page'] = (int) $page === 0 ? 1 : $page;
         $input['limit'] = 5;
-        $input['pagination_url'] = WEBROOT . "Crud/index/";
+        $input['pagination_url'] = WEBROOT . "crud/index/";
 
         $data['data'] = User::fetch($input);
         $data['data']['delete_sucess'] = FALSE;
@@ -42,7 +42,7 @@ class CrudController extends Controller
                 $encrypted_password = password_hash($_POST['password'], PASSWORD_BCRYPT, array('cost' => 12));
                 $data['data']['result'] = User::create($_POST['name'], $_POST['username'], $encrypted_password);
                 if ($data['data']['result']) {
-                    header("Location: " . WEBROOT . "Crud/index/1/" . Constants::CREATE_SUCCESS);
+                    header("Location: " . WEBROOT . "crud/index/1/" . Constants::CREATE_SUCCESS);
                 }
             } else {
                 $data['data']['result'] = FALSE;
@@ -64,7 +64,7 @@ class CrudController extends Controller
         $data['data']['MAX_CHAR_LIMIT_PASS'] = Constants::MAX_CHAR_LIMIT_PASS;
 
         if (empty($data['data']['user_id'])) {
-            header("Location: " . WEBROOT . "Crud/index/1");
+            header("Location: " . WEBROOT . "crud/index/1");
         }
 
         if (isset($_POST['submit'])) {
@@ -77,7 +77,7 @@ class CrudController extends Controller
                 $encrypted_password = password_hash($_POST['password'], PASSWORD_BCRYPT, array('cost' => 12));
                 $data['data']['result'] = User::update($_POST['name'], $_POST['username'], $encrypted_password, $id);
                 if ($data['data']['result']) {
-                    header("Location: " . WEBROOT . "Crud/index/1/" . Constants::UPDATE_SUCCESS);
+                    header("Location: " . WEBROOT . "crud/index/1/" . Constants::UPDATE_SUCCESS);
                 }
             } else {
                 $data['data']['user_name'] = $_POST['username'];
@@ -93,6 +93,6 @@ class CrudController extends Controller
     function delete($id)
     {
         User::delete($id);
-        header("Location: " . WEBROOT . "Crud/index/1/" . Constants::DELETE_SUCESS);
+        header("Location: " . WEBROOT . "crud/index/1/" . Constants::DELETE_SUCESS);
     }
 }

@@ -31,7 +31,7 @@ if (isset($data['create_success']) && $data['create_success'] == TRUE) {
 ?>
 <div class="row">
     <div class="col">
-        <a class="btn btn-outline-primary" href="<?php echo WEBROOT . "Crud/create/"; ?>">
+        <a class="btn btn-outline-primary" href="<?php echo WEBROOT . "crud/create/"; ?>">
             <i class="fa fa-user-plus" aria-hidden="true"></i>
             Add User
         </a>
@@ -61,11 +61,11 @@ if (isset($data['create_success']) && $data['create_success'] == TRUE) {
                     <td><?php echo $user['user_created_on']; ?></td>
                     <td><?php echo $user['user_updated_on']; ?></td>
                     <td>
-                        <a class="btn btn-info btn-sm" href="<?php echo WEBROOT . "Crud/update/" . $user['user_id']; ?>">
+                        <a class="btn btn-info btn-sm" href="<?php echo WEBROOT . "crud/update/" . $user['user_id']; ?>">
                             <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                             Update
                         </a>
-                        <a class="btn btn-danger btn-sm" href="<?php echo WEBROOT . "Crud/delete/" . $user['user_id']; ?>">
+                        <a class="btn btn-danger btn-sm" href="<?php echo WEBROOT . "crud/delete/" . $user['user_id']; ?>">
                             <i class="fa fa-trash" aria-hidden="true"></i>
                             Delete
                         </a>

@@ -54,7 +54,7 @@ if (isset($data['result']) && $data['result'] === TRUE) {
     <button name="submit" type="submit" class="btn btn-primary" <?php echo isset($data['result']) && $data['result'] === TRUE ? "disabled" : ""; ?>>
         Submit
     </button>
-    <a class="btn btn-info" href="<?php echo WEBROOT . "Crud/index/1"; ?>">
+    <a class="btn btn-info" href="<?php echo WEBROOT . "crud/index/1"; ?>">
         Home
     </a>
 </form>
