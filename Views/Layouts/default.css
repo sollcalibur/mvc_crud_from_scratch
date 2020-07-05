@@ -1,0 +1,15 @@
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #343a40;
+    color: white;
+    z-index: 4;
+    text-align: center;
+}
+
+.footer span {
+    font-size: 0.875em;
+    /* 14px/16=0.875em */
+}

@@ -9,5 +9,7 @@ class AppConfig
 
     // APP CONFIG
     const APP_BASE_URL = "my_crud";
+    const APP_TITLE = "MY-CRUD";
+    const APP_DEVELOPER = "benedict.m.sollano";
     const APP_EMAIL = "mailer@myapp.com";
 }

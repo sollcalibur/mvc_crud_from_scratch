@@ -10,11 +10,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="<?php echo WEBROOT . 'Views/Layouts/default.css'; ?> ">
+
 </head>
 
 <body>
     <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-        <a class="navbar-brand" href="<?php echo WEBROOT; ?>">MY-CRUD</a>
+        <a class="navbar-brand" href="<?php echo WEBROOT; ?>"><?php echo AppConfig::APP_TITLE; ?></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -27,7 +30,9 @@
         ?>
     </div>
 
-    <p>This is where the footer goes</p>
+    <div class="footer">
+        <span><?php echo AppConfig::APP_DEVELOPER  . " " . date("Y"); ?></span>
+    </div>
 </body>
 
 </html>
